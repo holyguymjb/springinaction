@@ -9,15 +9,10 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <!--compile "::$springVersion"-->
-    <!--compile "org.springframework:spring-jdbc:$springVersion"-->
     <!--compile "com.h2database:h2:$h2Version"-->
-    <!--compile "org.hibernate:hibernate-validator:$hibernateValidatorVersion"-->
-    <!--compile "org.apache.commons:commons-lang3:$commonsLangVersion"-->
 
-    <!--compile ":jstl:$"-->
-    <!--providedCompile "javax.servlet:javax.servlet-api:$servletApiVersion"-->
-    <!--providedCompile "javax.servlet.jsp:jsp-api:$jspApiVersion"-->
+
+
     <!--providedCompile "javax.el:javax.el-api:$jspElVersion"-->
 
     <!--testCompile "junit:junit-dep:$junitVersion"-->
@@ -67,6 +62,7 @@
         <jspApiVersion>2.1</jspApiVersion>
         <jspElVersion>2.2.4</jspElVersion>
         <hibernateValidatorVersion>5.0.1.Final</hibernateValidatorVersion>
+        <h2Version>1.4.182</h2Version>
 
     </properties>
 
@@ -80,7 +76,7 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstlVersion}</version>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
 
         <dependency>
@@ -120,6 +116,12 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>${hibernateValidatorVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>${h2Version}</version>
         </dependency>
 
 
