@@ -7,6 +7,8 @@
     <groupId>com.mark</groupId>
     <artifactId>ch05</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
     <parent>
         <groupId>com.mark</groupId>
         <artifactId>springinaction</artifactId>

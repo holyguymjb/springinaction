@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Import;
 import org.springframework.core.type.filter.RegexPatternTypeFilter;
 
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import spittr.config.RootConfig.WebPackage;
 
 @Configuration
 @ComponentScan(basePackages={"spittr"},
@@ -18,9 +17,5 @@ import spittr.config.RootConfig.WebPackage;
         @Filter(type=FilterType.ANNOTATION, value=EnableWebMvc.class)
     })
 public class RootConfig {
-  public static class WebPackage extends RegexPatternTypeFilter {
-    public WebPackage() {
-      super(Pattern.compile("spittr\\.web"));
-    }    
-  }
+
 }
