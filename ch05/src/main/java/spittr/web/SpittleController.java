@@ -38,13 +38,14 @@ public class SpittleController {
        return spittleRepository.findSpittles(max,count);
   }
 
-  public String spittes(Model model){
+    @RequestMapping(value = "/{spittleId}",method = RequestMethod.GET)
+    public String spittle(@PathVariable(value = "spittleId") int spittleId,Model model){
 
-      List<Spittle> spittes = spittleRepository.findRecentSpittles();
+      model.addAttribute(spittleRepository.findOne(spittleId));
+      return "spittle";
+    }
 
-      model.addAttribute(spittes);
-      return "spittes";
-  }
+
 
 
 
