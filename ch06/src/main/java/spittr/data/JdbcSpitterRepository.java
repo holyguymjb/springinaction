@@ -6,8 +6,9 @@ import java.sql.SQLException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Repository;
 
+
+import org.springframework.stereotype.Repository;
 import spittr.Spitter;
 
 @Repository
@@ -29,6 +30,7 @@ public class JdbcSpitterRepository implements SpitterRepository {
         spitter.getFirstName(),
         spitter.getLastName(),
         spitter.getEmail());
+
     return spitter; // TODO: Determine value for id
   }
 
